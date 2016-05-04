@@ -1,0 +1,10 @@
+c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\Enmascarada\bin\Debug\Enmascarada.exe.config
+c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\Enmascarada\obj\Debug\Enmascarada.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\Enmascarada\bin\Debug\Enmascarada.exe
+c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\Enmascarada\bin\Debug\Enmascarada.pdb
+c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\Enmascarada\bin\Debug\EntityFramework.dll
+c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\Enmascarada\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\Enmascarada\bin\Debug\EntityFramework.xml
+c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\Enmascarada\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\Enmascarada\obj\Debug\Enmascarada.exe
+c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\Enmascarada\obj\Debug\Enmascarada.pdb

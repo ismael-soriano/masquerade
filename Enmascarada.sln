@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enmascarada", "Enmascarada\Enmascarada.csproj", "{F370BA02-6995-4D2B-BA16-F3C28340B521}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnmascaradaWeb", "EnmascaradaWeb\EnmascaradaWeb.csproj", "{052A2C36-B01A-41B5-A847-ED86CC3156B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnmascaradaWeb.Test", "EnmascaradaWeb.Test\EnmascaradaWeb.Test.csproj", "{8F93AB00-60B7-4F8F-B6FB-3878922116A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F370BA02-6995-4D2B-BA16-F3C28340B521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F370BA02-6995-4D2B-BA16-F3C28340B521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F370BA02-6995-4D2B-BA16-F3C28340B521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F370BA02-6995-4D2B-BA16-F3C28340B521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{052A2C36-B01A-41B5-A847-ED86CC3156B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{052A2C36-B01A-41B5-A847-ED86CC3156B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{052A2C36-B01A-41B5-A847-ED86CC3156B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{052A2C36-B01A-41B5-A847-ED86CC3156B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F93AB00-60B7-4F8F-B6FB-3878922116A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F93AB00-60B7-4F8F-B6FB-3878922116A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F93AB00-60B7-4F8F-B6FB-3878922116A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F93AB00-60B7-4F8F-B6FB-3878922116A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
