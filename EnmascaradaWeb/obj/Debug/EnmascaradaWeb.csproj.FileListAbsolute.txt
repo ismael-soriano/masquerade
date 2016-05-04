@@ -97,3 +97,4 @@ c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\EnmascaradaWeb\
 c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\EnmascaradaWeb\bin\zh-Hant\System.Spatial.resources.dll
 c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\EnmascaradaWeb\obj\Debug\EnmascaradaWeb.dll
 c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\EnmascaradaWeb\obj\Debug\EnmascaradaWeb.pdb
+c:\users\admin\documents\visual studio 2012\Projects\Enmascarada\EnmascaradaWeb\obj\Debug\EnmascaradaWeb.csprojResolveAssemblyReference.cache

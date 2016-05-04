@@ -2,104 +2,118 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web;
-using System.Web.Http;
+using System.Web.Mvc;
 using EnmascaradaWeb.Models;
 
 namespace EnmascaradaWeb.Controllers
 {
-    public class ProductController : ApiController
+    public class ProductController : Controller
     {
         private UsersContext db = new UsersContext();
 
-        // GET api/Product
-        public IEnumerable<Product> GetProducts()
+        //
+        // GET: /Product/
+
+        public ActionResult Index()
         {
-            return db.Products.AsEnumerable();
+           
+
+            return View(db.Products.ToList());
         }
 
-        // GET api/Product/5
-        public Product GetProduct(int id)
+        //
+        // GET: /Product/Details/5
+
+        public ActionResult Details(int id = 0)
         {
             Product product = db.Products.Find(id);
             if (product == null)
             {
-                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
+                return HttpNotFound();
             }
-
-            return product;
+            return View(product);
         }
 
-        // PUT api/Product/5
-        public HttpResponseMessage PutProduct(int id, Product product)
+        //
+        // GET: /Product/Create
+
+        public ActionResult Create()
         {
-            if (!ModelState.IsValid)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-            }
-
-            if (id != product.Id)
-            {
-                return Request.CreateResponse(HttpStatusCode.BadRequest);
-            }
-
-            db.Entry(product).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex);
-            }
-
-            return Request.CreateResponse(HttpStatusCode.OK);
+            return View();
         }
 
-        // POST api/Product
-        public HttpResponseMessage PostProduct(Product product)
+        //
+        // POST: /Product/Create
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Product product)
         {
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);
                 db.SaveChanges();
+                return RedirectToAction("Index");
+            }
 
-                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, product);
-                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = product.Id }));
-                return response;
-            }
-            else
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-            }
+            return View(product);
         }
 
-        // DELETE api/Product/5
-        public HttpResponseMessage DeleteProduct(int id)
+        //
+        // GET: /Product/Edit/5
+
+        public ActionResult Edit(int id = 0)
         {
             Product product = db.Products.Find(id);
             if (product == null)
             {
-                return Request.CreateResponse(HttpStatusCode.NotFound);
+                return HttpNotFound();
             }
+            return View(product);
+        }
 
-            db.Products.Remove(product);
+        //
+        // POST: /Product/Edit/5
 
-            try
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Product product)
+        {
+            if (ModelState.IsValid)
             {
+                db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
+                return RedirectToAction("Index");
             }
-            catch (DbUpdateConcurrencyException ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex);
-            }
+            return View(product);
+        }
 
-            return Request.CreateResponse(HttpStatusCode.OK, product);
+        //
+        // GET: /Product/Delete/5
+
+        public ActionResult Delete(int id = 0)
+        {
+            Product product = db.Products.Find(id);
+            if (product == null)
+            {
+                return HttpNotFound();
+            }
+            return View(product);
+        }
+
+        //
+        // POST: /Product/Delete/5
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Product product = db.Products.Find(id);
+            db.Products.Remove(product);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
